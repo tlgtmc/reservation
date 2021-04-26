@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    include: hotel-config
+  application:
+    name: Room Occupancy Manager
+server:
+  port: 7101
+
+

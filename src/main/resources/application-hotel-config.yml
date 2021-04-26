@@ -1,0 +1,6 @@
+hotel:
+  payment:
+    premium-limit: ${PREMIUM_PAY_LIMIT:100}
+  room:
+    premium-count: ${PREMIUM_ROOM_COUNT:10}
+    economy-count: ${ECONOMY_ROOM_COUNT:10}
