@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
@@ -38,12 +39,30 @@ public class ReservationService {
 
     private Double checkInCustomers(List<Double> payments, CategoryType type) {
         double totalPayment = 0.0;
+        if (type.equals(CategoryType.ECONOMY)) {
+            totalPayment += checkForUpgrade(payments, CategoryType.PREMIUM);
+        }
+
         for (Double payment: payments) {
             if (roomService.checkAvailabilityFor(type)){
                 totalPayment += payment;
                 roomService.reserveRoom(type);
             }
         }
+        return totalPayment;
+    }
+
+    private Double checkForUpgrade(List<Double> payments, CategoryType type) {
+        double totalPayment = 0.0;
+
+        Iterator<Double> iterator = payments.iterator();
+
+        while (roomService.checkAvailabilityFor(type) && iterator.hasNext()) {
+            totalPayment += iterator.next();
+            roomService.reserveRoom(type);
+            iterator.remove();
+        }
+
         return totalPayment;
     }
 }
