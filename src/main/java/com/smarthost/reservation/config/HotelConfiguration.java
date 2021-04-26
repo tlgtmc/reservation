@@ -18,4 +18,7 @@ public class HotelConfiguration {
     @Value("${hotel.room.economy-count:10}")
     private Integer economyRoomCount;
 
+    @Value("${hotel.payment.currency:EUR}")
+    private String currency;
+
 }

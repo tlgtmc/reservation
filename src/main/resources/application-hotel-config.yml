@@ -1,5 +1,6 @@
 hotel:
   payment:
+    currency: ${CURRENCY:EUR}
     premium-limit: ${PREMIUM_PAY_LIMIT:100}
   room:
     premium-count: ${PREMIUM_ROOM_COUNT:10}

@@ -5,6 +5,16 @@ package com.smarthost.reservation.enums;
  */
 
 public enum CategoryType {
-    ECONOMY,
-    PREMIUM;
+    ECONOMY("Economy"),
+    PREMIUM("Premium");
+
+    String friendlyName;
+
+    CategoryType(String name) {
+        this.friendlyName = name;
+    }
+
+    public String getFriendlyName() {
+        return this.friendlyName;
+    }
 }
