@@ -12,6 +12,8 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
 /**
+ * <h1>LoggerAspect</h1>
+ *
  * Logging aspect declaration class
  *
  * @author tatmaca

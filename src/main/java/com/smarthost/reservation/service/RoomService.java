@@ -5,6 +5,10 @@ import com.smarthost.reservation.domain.dto.RoomCountUpdateRequestDto;
 import com.smarthost.reservation.enums.CategoryType;
 
 /**
+ * <h1>RoomService</h1>
+ *
+ * This interface specifies the functionalities of RoomService
+ *
  * @author tatmaca
  */
 

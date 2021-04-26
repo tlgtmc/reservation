@@ -5,6 +5,16 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * <h1>HotelConfiguration</h1>
+ *
+ * This class reads the configuration
+ * parameters from property file.
+ *
+ * Fields are
+ * - premiumRoomCount
+ * - economyRoomCount
+ * - currency
+ *
  * @author tatmaca
  */
 

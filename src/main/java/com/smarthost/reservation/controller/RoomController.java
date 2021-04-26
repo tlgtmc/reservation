@@ -8,6 +8,10 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 /**
+ * <h1>RoomController</h1>
+ *
+ * This controller uses "/room" mapping.
+ *
  * @author tatmaca
  */
 
@@ -19,16 +23,29 @@ public class RoomController {
     private final RoomServiceImpl roomService;
     private final HotelConfiguration hotelConfiguration;
 
+    /**
+     * This method updates room count for given request DTO.
+     * @param roomCount -> request DTO
+     * @return ApiResponse -> Status and explanation result
+     */
     @PostMapping("/count")
     public ApiResponse updateRoomCount(@RequestBody RoomCountUpdateRequestDto roomCount) {
         return roomService.updateRoomCount(roomCount);
     }
 
+    /**
+     * This method checks-out all the rooms.
+     * @return ApiResponse -> Status and explanation result
+     */
     @PutMapping("/checkOutAll")
     public ApiResponse checkOutAllRooms() {
         return roomService.checkOutAllRooms();
     }
 
+    /**
+     * This method returns room counts.
+     * @return String -> explanation of room counts.
+     */
     @GetMapping("/counts")
     public String getRoomCounts() {
         var sb = new StringBuilder("Premium Room Count: ");

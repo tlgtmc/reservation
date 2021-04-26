@@ -1,6 +1,10 @@
 package com.smarthost.reservation.enums;
 
 /**
+ * <h1>CategoryType</h1>
+ *
+ * This enum class defines the customer categories.
+ *
  * @author tatmaca
  */
 
