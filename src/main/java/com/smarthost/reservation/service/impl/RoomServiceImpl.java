@@ -5,7 +5,6 @@ import com.smarthost.reservation.domain.ApiResponse;
 import com.smarthost.reservation.domain.dto.RoomCountUpdateRequestDto;
 import com.smarthost.reservation.enums.CategoryType;
 import com.smarthost.reservation.service.RoomService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
